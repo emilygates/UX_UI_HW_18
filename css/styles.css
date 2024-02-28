@@ -10,6 +10,10 @@ div.flexContainer div {
     padding: 1%;
 }
 
+h1 {
+    text-align: center;
+}
+
 h3 {
     text-align: center;
 }
@@ -18,6 +22,48 @@ h3 {
     div.flexContainer {
       flex-direction: column;
     }
-  }
+}
+
+@media (max-width: 600px) {
+    div.flexContainer div {
+      width: 100%;
+    }
+}
 
 /* My Work Section coded using CSS Grid */
+
+/* my grid container */
+
+div.workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "item1 item1 img1 img1 img1"
+    "img2 img2 img2 item2 item2"
+    ;
+}
+
+/* my grid babies */
+
+.gridChild {
+    margin: 10px;
+    padding: 10px;
+    height: 300px;
+  }
+
+.img1 {
+    grid-area: img1;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.item2 {
+    grid-area: item2;
+}
